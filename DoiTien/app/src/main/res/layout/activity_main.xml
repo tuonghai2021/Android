@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="Đổi tiền"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:paddingTop="30dp"
+        android:textAlignment="center"
+        android:background="#FB8C00"
+        android:backgroundTint="#FB8C00" />
+
+    <LinearLayout
+    android:id="@+id/linear1"
+    android:layout_below="@+id/title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="From: "
+        />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/SelectFrom"
+        />
+</LinearLayout>
+    <EditText
+        android:layout_below="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtFrom"
+        android:inputType="numberDecimal"
+        android:text="0"
+        />
+    <LinearLayout
+        android:id="@+id/linear2"
+        android:layout_below="@+id/edtFrom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="To: "
+        />
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/SelectTo"
+        />
+</LinearLayout>
+    <EditText
+        android:layout_below="@+id/linear2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtTo"
+        android:enabled="false"
+        android:inputType="number|text"
+        android:text="0"
+        />
+
+    <Button
+        android:layout_below="@+id/edtTo"
+        android:id="@+id/btnChuyen"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FB8C00"
+        android:enabled="false"
+        android:textColor="@color/white"
+        android:text="Chuyển đổi" />
+
+    <Button
+        android:layout_below="@+id/btnChuyen"
+        android:id="@+id/btnDatLai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FB8C00"
+        android:text="Xóa" />
+
+</RelativeLayout>
